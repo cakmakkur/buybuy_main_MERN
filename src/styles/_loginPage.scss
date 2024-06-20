@@ -1,0 +1,24 @@
+@import "variables";
+
+.login_page__main {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  padding: 10vh 20vw;
+  flex-direction: column;
+  align-items: center;
+  background-color: lighten($light-orange, 35%);
+  & h1 {
+    margin-bottom: 40px;
+    color: $dark-blue;
+  }
+}
+
+.login_page__flex {
+  border-top: 1px solid black;
+  padding-top: 30px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}

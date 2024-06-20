@@ -1,0 +1,63 @@
+$x-small: 358px;
+$small: 450px;
+$small-width: 690px;
+$mid: 700px;
+$mid-mid: 890px;
+$large: 960px;
+$mid-large: 1020px;
+$x-large: 1100px;
+$lx-large: 1370px;
+
+@mixin XS {
+  @media (max-width: $x-small) {
+    @content;
+  }
+}
+@mixin S {
+  @media (max-width: $mid) {
+    @content;
+  }
+}
+@mixin M {
+  @media (max-width: $mid-mid) {
+    @content;
+  }
+}
+@mixin ML {
+  @media (max-width: $large) {
+    @content;
+  }
+}
+@mixin L {
+  @media (max-width: $mid-large) {
+    @content;
+  }
+}
+@mixin MxL {
+  @media (max-width: $x-large) {
+    @content;
+  }
+}
+//relevant for the menubar
+@mixin MEDIUM_WIDTH {
+  @media (max-width: $mid-large) {
+    @content;
+  }
+}
+
+@mixin SMALL_WIDTH {
+  @media (max-width: $small-width) {
+    @content;
+  }
+}
+
+@mixin XL {
+  @media (max-width: $lx-large) {
+    @content;
+  }
+}
+@mixin XxL {
+  @media (min-width: $lx-large) {
+    @content;
+  }
+}

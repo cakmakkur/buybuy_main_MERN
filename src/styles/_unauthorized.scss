@@ -1,0 +1,32 @@
+@import "variables";
+@import "responsive";
+
+.unauthorized_page {
+  width: 100vw;
+  height: 60vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  padding: 0px 3vw;
+  @include SMALL_WIDTH {
+    height: 70vh;
+  }
+  & h3 {
+    text-align: center;
+  }
+}
+
+.bckg_logo_add_div--unauth {
+  transform: scale(0.7);
+  top: 5px;
+}
+
+.order_finished__button--unauth {
+  font-size: 1.2rem;
+  @include SMALL_WIDTH {
+    width: 50vw;
+  }
+}

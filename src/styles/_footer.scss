@@ -1,0 +1,60 @@
+.footer_div {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr;
+  padding: 5vw;
+  background-color: darken($dark-blue, 13%);
+  color: white;
+  font-size: 1.1rem;
+  @include MEDIUM_WIDTH {
+    font-size: 1rem;
+  }
+  & a {
+    color: white;
+    transition: 0.2s;
+    &:hover {
+      color: $light-orange;
+    }
+  }
+  & li {
+    padding: 10px 0px;
+  }
+  & h3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 5vw;
+    padding-bottom: 3vh;
+    color: $dark-orange;
+    @include MEDIUM_WIDTH {
+      font-size: 0.9rem;
+      padding-top: 5px;
+      padding-right: 2vw;
+      padding-bottom: 2vh;
+    }
+    & h6 {
+      padding-top: 5px;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.project_year {
+  font-size: 0.75rem;
+  @include MEDIUM_WIDTH {
+    font-size: 0.65rem;
+  }
+}
+
+.footer_social_links_div {
+  display: flex;
+  column-gap: 15px;
+  margin-bottom: 20px;
+  @include MEDIUM_WIDTH {
+    margin-bottom: 0px;
+  }
+  & img {
+    width: 50px;
+    height: 50px;
+  }
+}

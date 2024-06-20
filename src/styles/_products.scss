@@ -1,0 +1,339 @@
+@import "responsive";
+@import "variables";
+
+.products_main_div {
+  height: 100%;
+}
+
+.prod_main_div {
+  position: relative;
+  // max-height: calc(100vh - 136px);
+  padding: 15px 5vw 15vh 5vw;
+  display: flex;
+  margin-top: 15px;
+  @include SMALL_WIDTH {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// FILTER SECTION
+
+.filter_div {
+  min-width: 250px;
+  // height: 100%;
+  padding: 30px 20px 3vh 20px;
+  border-right: 1px solid black;
+  background-color: rgb(251, 251, 251);
+  @include SMALL_WIDTH {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 30px 50px;
+    border-right: none;
+    z-index: 500;
+    background-color: lighten($light-orange, 40%);
+    transform: translateX(-130%);
+    transition: 0.2s;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  &--open {
+    transition: 0.2s;
+    transform: translateX(0);
+  }
+  section {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 700;
+    h3 {
+      border-top: 1px solid black;
+      padding-top: 10px;
+      margin-bottom: 5px;
+    }
+    h3:nth-child(1) {
+      border-top: none;
+      margin-top: 0;
+    }
+  }
+}
+
+.checkbox_label_div {
+  input {
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+  }
+}
+
+.checkbox_stars_div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5px;
+  input {
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+}
+.star_svg {
+  width: 15px;
+  color: gold;
+}
+
+// PRODUCT SECTION
+.prod_div {
+  margin-top: 30px;
+}
+.prod_thumbnail_box,
+.prod_div {
+  display: grid;
+  width: 100%;
+  padding: 35px;
+  column-gap: 3vh;
+  row-gap: 5vh;
+  grid-template-columns: repeat(4, 1fr);
+  @include XL {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include MxL {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include M {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.ex_products_banner {
+  text-align: center;
+  padding-top: 13vh;
+  padding-bottom: 6vh;
+  background-color: $light-blue;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    background-color: rgba(255, 0, 0, 0);
+  }
+  & p {
+    font-size: 7rem;
+    font-weight: 600;
+    color: $dark-orange;
+    @include SMALL_WIDTH {
+      font-size: 6rem;
+    }
+  }
+}
+
+.ex_products_div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 10vw;
+  width: 100%;
+  row-gap: 20vh;
+  padding: 10vh 5vw;
+}
+
+.upper_config_buttons {
+  @include SMALL_WIDTH {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.sort_filter_button {
+  position: relative;
+  height: 4vh;
+  margin-left: 35px;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  & span {
+    font-size: 1.1rem;
+    color: rgb(51, 51, 51);
+    &:hover {
+      color: $dark-orange;
+    }
+  }
+  & img {
+    display: inline;
+    padding-right: 5px;
+  }
+  &--side_open {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background-color: lighten($light-orange, 40%);
+  }
+}
+
+.filter_sidebar--mobile {
+  display: none;
+  @include SMALL_WIDTH {
+    display: inline-flex;
+  }
+}
+
+.overlay_sort {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: auto;
+  z-index: 101;
+}
+
+.sort_options {
+  width: calc(100% - 35px);
+  border-bottom: 1px solid rgb(168, 168, 168);
+  margin-left: 35px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.sort_options_div {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 150px;
+  z-index: 102;
+  transition: 0.15s;
+  pointer-events: none;
+  transform: scale(0);
+  opacity: 0;
+  & ul {
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+  }
+  & ul li {
+    padding: 5px 0px;
+    background-color: $light-orange;
+    transition: 0.2s;
+    &:hover {
+      background-color: $dark-orange;
+      cursor: pointer;
+    }
+  }
+}
+
+.sort_options_div--open {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.thumbnail_box {
+  display: grid;
+  grid-template-rows: 250px 1fr;
+  width: 100%;
+  height: 100%;
+  min-width: 230px;
+  max-width: 300px;
+  border: 1px solid rgb(231, 231, 231);
+  background-color: rgb(250, 250, 250);
+  transition: 0.2s;
+  &:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+  }
+  .img_box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    flex-grow: 1;
+    & img {
+      width: 100%;
+      height: 100%;
+      max-height: 250px;
+      object-fit: cover;
+    }
+  }
+  .info_box {
+    padding: 5px;
+    flex-grow: 2;
+
+    .prod_title {
+      margin-bottom: 10px;
+    }
+    .prod_desc {
+      margin-bottom: 10px;
+    }
+    .stock_box {
+      margin-bottom: 10px;
+
+      & span {
+        color: $submit-btn-gr;
+      }
+    }
+    .freeShipping_box {
+      margin-bottom: 10px;
+
+      & span {
+        color: $primary-hvr-orange;
+      }
+    }
+    .stars_box {
+      margin-bottom: 10px;
+
+      display: flex;
+      flex-grow: 1;
+      & span {
+        padding-left: 5px;
+      }
+    }
+    .discount_box {
+      margin-bottom: 0px;
+    }
+    .price_box {
+      font-size: 1.3rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: end;
+    }
+    .discount_box {
+      display: flex;
+      justify-content: end;
+      & span {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $submit-btn-hvr-gr;
+        & span {
+          padding-left: 10px;
+          font-size: 1rem;
+          color: gray;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}
+
+.prod_desc p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+.lower_bar:hover,
+.upper_bar:hover {
+  cursor: pointer;
+}

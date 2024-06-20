@@ -1,0 +1,183 @@
+@import "variables";
+@import "responsive";
+
+.edit_profile__main {
+  width: 100%;
+  height: 88vh;
+  padding: 10vh 15vw;
+  color: $dark-blue;
+  background-color: lighten($light-orange, 30%);
+  font-size: 1.2rem;
+  & h1 {
+    cursor: default;
+    margin-bottom: 25px;
+  }
+  & input {
+    border: none;
+    border-radius: 10px;
+    display: block;
+    height: 60px;
+    margin: 0vh 0px 5vh 0px;
+    font-size: 2rem;
+    color: darken($dark-orange, 35%);
+    background-color: lighten($light-orange, 30%);
+    transition: 0.2s;
+    overflow: none;
+    text-wrap: wrap;
+    display: flex;
+    &:hover {
+      cursor: pointer;
+      background-color: darken($light-orange, 3%);
+      transition: 0.2s;
+    }
+    &:focus {
+      cursor: auto;
+    }
+  }
+}
+
+.edit_profile__span {
+  color: $dark-orange;
+  padding-left: 25px;
+  font-size: 2rem;
+}
+
+.edit_account__save_changes {
+  width: 40vw;
+  font-size: 2rem;
+  margin: 3vh 0px;
+  height: 10vh;
+  border-radius: 50px;
+  border: 1px solid $dark-blue;
+  background-color: $dark-orange;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0px 0px 14px 4px rgba(0, 0, 0, 0.297);
+  &:hover {
+    transform: scale(1.01);
+    background-color: lighten($dark-orange, 5%);
+    cursor: pointer;
+  }
+  &:disabled {
+    background-color: gray;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+  @include SMALL_WIDTH {
+    font-size: 1rem;
+  }
+}
+
+.edit_account__logout {
+  border: none;
+  width: 80px;
+  height: 80px;
+  background-color: $dark-orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  transition: 0.2s;
+  box-shadow: 0px 0px 5px 1px lighten($dark-orange, 20%);
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  &:hover {
+    background-color: rgba(156, 78, 0, 0.215);
+    transform: scale(1.05);
+  }
+  & img {
+    width: 60px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  @include SMALL_WIDTH {
+    font-size: 1rem;
+    transform: scale(0.7);
+    top: 80px;
+    right: 30px;
+  }
+}
+
+//review input
+
+.review_input_div {
+  background-color: lighten($light-orange, 30%);
+  border: 1px solid black;
+  border-radius: 5px;
+  position: absolute;
+  margin: 40px 0px;
+  width: 50vw;
+  height: 150px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  z-index: 240;
+  & form {
+    display: flex;
+    flex-direction: column;
+  }
+  @include ML {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    row-gap: 20px;
+  }
+  @include SMALL_WIDTH {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.star_container:hover {
+  cursor: pointer;
+}
+
+.stars_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.strs {
+  display: flex;
+  flex-direction: row;
+  @include ML {
+    padding-bottom: 30px;
+  }
+}
+
+.review__input {
+  width: 250px;
+}
+
+.review__input--title {
+  margin-bottom: 10px;
+}
+
+.review__input--message {
+  height: 60px;
+}
+
+.review__submit_button {
+  margin-bottom: 5px;
+  width: 140px;
+  height: 50px;
+  border: 1px solid black;
+  padding: 7px 0px;
+  border-radius: 3px;
+  background-color: $light-blue;
+  color: $dark-orange;
+  font-weight: 600;
+  font-size: 1.15rem;
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($dark-orange, 25%);
+  }
+}

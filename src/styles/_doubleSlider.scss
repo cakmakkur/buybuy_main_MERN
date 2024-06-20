@@ -1,0 +1,91 @@
+@import "variables";
+
+/* Track */
+.price_slider_div input[type="range"]::-webkit-slider-runnable-track {
+  background: #ddd;
+  border-radius: 17px;
+  height: 6px;
+}
+.price_slider_div input[type="range"]::-moz-range-track {
+  background: #ddd;
+  border-radius: 17px;
+  height: 8px;
+}
+.price_slider_div input[type="range"]::-ms-track {
+  background: #ddd;
+  border-radius: 17px;
+  height: 8px;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Thumb */
+.price_slider_div input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: 0;
+  height: 20px;
+  width: 20px;
+  background: $dark-orange;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  top: -5px;
+  z-index: 2;
+}
+.price_slider_div input[type="range"]::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  border: none;
+  top: -5px;
+}
+.price_slider_div input[type="range"]::-ms-thumb {
+  height: 20px;
+  width: 20px;
+  background: #007bff;
+  border-radius: 50%;
+  border: none;
+  top: -5px;
+}
+.price_slider_div .upper {
+  z-index: 2;
+}
+.price_number_div {
+  display: flex;
+  justify-content: space-between;
+  input {
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 100px;
+    height: 70px;
+    text-align: center;
+    pointer-events: none;
+  }
+}
+
+.price_slider_div {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.price_slider_div input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+// BAR IN THE MIDDLE
+
+.bar_bw_thumbs {
+  position: absolute;
+  top: -6px;
+  height: 6px;
+  left: 10px;
+  right: 10px;
+  background-color: $dark-orange;
+  z-index: 1;
+}

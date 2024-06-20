@@ -1,0 +1,25 @@
+.terms_div {
+  padding: 10vh 10vw;
+  & header {
+    margin: 3vh 0px;
+    font-size: 2rem;
+    overflow: visible;
+  }
+  & h2 {
+    margin: 2vh 0px;
+  }
+}
+
+.bckg_logo_add_div {
+  position: fixed;
+  bottom: 5vh;
+  left: 0;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.08;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+  pointer-events: none;
+}

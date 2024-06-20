@@ -1,0 +1,215 @@
+.particle_div {
+  position: absolute;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  top: -10px;
+  left: 6px;
+  animation: m_div 0.5s linear forwards;
+}
+
+.particle {
+  position: absolute;
+  z-index: 100;
+  width: 1px;
+  height: 1px;
+  border: 1px solid darken($light-blue, 70%);
+  border-radius: 50%;
+  top: 24px;
+  left: 20px;
+  animation: move 0.5s linear forwards;
+}
+
+@keyframes m0 {
+  0% {
+    transform: scale(1);
+  }
+  69% {
+    transform: scale(3);
+    top: 0;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+    top: 0;
+  }
+}
+@keyframes m1 {
+  0% {
+    transform: scale(1);
+  }
+  69% {
+    transform: scale(3);
+    top: 9px;
+    left: 35px;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+    top: 9px;
+    left: 35px;
+  }
+  100% {
+    opacity: 0;
+    top: 9px;
+    left: 35px;
+  }
+}
+@keyframes m2 {
+  0% {
+    transform: scale(1);
+  }
+  69% {
+    transform: scale(3);
+    left: 44px;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+    left: 44px;
+  }
+  100% {
+    opacity: 0;
+    left: 44px;
+  }
+}
+@keyframes m3 {
+  0% {
+    transform: scale(1);
+  }
+  69% {
+    transform: scale(3);
+    top: 39px;
+    left: 35px;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+    top: 39px;
+    left: 35px;
+  }
+  100% {
+    opacity: 0;
+    top: 39px;
+    left: 35px;
+  }
+}
+@keyframes m4 {
+  0% {
+    transform: scale(1);
+  }
+  69% {
+    transform: scale(3);
+    top: 48px;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+    top: 48px;
+  }
+  100% {
+    opacity: 0;
+    top: 48px;
+  }
+}
+@keyframes m5 {
+  0% {
+    transform: scale(1);
+  }
+  69% {
+    transform: scale(3);
+    top: 39px;
+    left: 5px;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+    top: 39px;
+    left: 5px;
+  }
+  100% {
+    opacity: 0;
+    top: 39px;
+    left: 5px;
+  }
+}
+@keyframes m6 {
+  0% {
+    transform: scale(1);
+  }
+  69% {
+    transform: scale(3);
+    left: 0px;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+    left: 0px;
+  }
+  100% {
+    opacity: 0;
+    left: 0px;
+  }
+}
+@keyframes m7 {
+  0% {
+    transform: scale(1);
+  }
+  69% {
+    transform: scale(3);
+    top: 9px;
+    left: 5px;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 1;
+    top: 9px;
+    left: 5px;
+  }
+  100% {
+    opacity: 0;
+    top: 9px;
+    left: 5px;
+  }
+}
+
+@keyframes m_div {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.menubar_cart_btn {
+  animation: shake 0.5s linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  24% {
+    transform: scale(1.2) rotate(45deg);
+  }
+  26% {
+    transform: scale(1.2) rotate(45deg);
+  }
+  50% {
+    transform: scale(1.2) rotate(0deg);
+  }
+  74% {
+    transform: scale(1.2) rotate(-45deg);
+  }
+  76% {
+    transform: scale(1.2) rotate(-45deg);
+  }
+  100% {
+    transform: scale(1.2) rotate(0deg);
+  }
+}

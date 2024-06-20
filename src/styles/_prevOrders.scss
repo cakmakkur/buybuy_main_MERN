@@ -1,0 +1,29 @@
+@import "variables";
+
+.prev_orders--h1 {
+  margin-bottom: 20px;
+  margin-left: 5px;
+  color: $dark-blue;
+}
+
+.review_toggle_div {
+  border: 1px solid black;
+  width: 150px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: lighten($light-orange, 15%);
+    cursor: pointer;
+  }
+}
+
+.review_logo--img {
+  display: inline;
+}
+
+.review_logo--span {
+  margin-left: 10px;
+}
