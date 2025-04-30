@@ -29,9 +29,9 @@ export default function QueryResults({
   useEffect(() => {
     if (searchResults && searchResults.length > 0 && productFound) {
       setIsLoading(true);
-      Promise.all(searchResults.map((product) => fetchThumbnail(product))).then(
-        () => setIsLoading(false)
-      );
+      Promise.all(
+        searchResults.forEach((product) => fetchThumbnail(product))
+      ).then(() => setIsLoading(false));
     } else if (!productFound) {
       setIsLoading(false);
     }
