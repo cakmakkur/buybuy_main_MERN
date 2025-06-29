@@ -17,6 +17,7 @@ export default function Searchbar() {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const data = await response.json();
+      console.log(data);
       setProductFound(true);
       setSearchResults(data);
     } catch (error) {
